@@ -23,9 +23,8 @@ int FixImportTables( PVOID imgVA);
 ================================================================*/
 int main()
 {
-    static DWORD imgVA = 0xDEADBEEF; /*this value will be replaced with 
-										payload base address upon injection into
-										target process.*/
+    static DWORD imgVA = 0xDEADBEEF; /*this value will be replaced with
+	payload base address upon injection into target process.*/
 	printf("imgVA %x\n", imgVA);
     FixImportTables((PVOID)imgVA);
     printf("I am a PE running in injected memory!\n");
